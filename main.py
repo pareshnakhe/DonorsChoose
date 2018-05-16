@@ -43,11 +43,11 @@ projects = pd.read_csv('sample1.csv', names=headers, quotechar='"', skipinitials
 rel_para = ['Project ID', 'Project Cost', 'Project Subject Category Tree', 'Project Subject Subcategory Tree', 'Project Grade Level Category', 'Project Resource Category']
 projects = projects.loc[:, rel_para]
 projects = projects.dropna()
-print type(projects.loc[:, ['Project Subject Category Tree']]), type(projects.loc[:, ['Project Subject Category Tree']].values)
 
-
-exit(1)
-projects.loc[:, ['Project Subject Category Tree']] = projects.loc[:, ['Project Subject Category Tree']].str.replace('"', '')
+# projects.loc[:, ['Project Subject Category Tree']] = str(projects.loc[:, ['Project Subject Category Tree']].values).replace('"', '')
+# print projects.loc[:, ['Project Subject Category Tree']]
+# exit(1)
+# projects.loc[:, ['Project Subject Category Tree']] = projects.loc[:, ['Project Subject Category Tree']].str.replace('"', '')
 
 # # print projects['Project Cost'].describe()
 # #
