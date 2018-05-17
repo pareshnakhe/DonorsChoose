@@ -20,7 +20,7 @@ values in column 'percent_full' to 1.0 if they are greater than 1.0
 # print max(data['percent_full']), min(data['percent_full'])
 
 data.loc[data['percent_full'] > 1.0, 'percent_full'] = 1.0
-print data[data['percent_full'] > 1.0].count()
+# print data[data['percent_full'] > 1.0].count()
 print max(data['percent_full']), min(data['percent_full'])
 
 # This is interesting: there is a spike at 0.5 and 1.0
@@ -34,13 +34,14 @@ data = pd.get_dummies(data)
 
 # divide the 'percent_full' values into buckets so that it is categorical data.
 # I am doing this to use logistic regression out-of-the-box
-data.loc[:, 'percent_full'] = pd.cut(data.loc[:, 'percent_full'].values, 100, labels=range(100))
+data.loc[:, 'percent_full'] = pd.cut(data.loc[:, 'percent_full'].values, 10, labels=range(10))
 # print data.head()
 
 
 X = data.drop(['percent_full'], axis=1)
 y = data['percent_full']
 
+print 'start'
 clf = LogisticRegression(solver='sag', max_iter=100, random_state=42,
                              multi_class='multinomial', n_jobs=3).fit(X, y)
 

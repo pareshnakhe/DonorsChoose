@@ -40,7 +40,7 @@ outputFile.close()
 
 
 projects = pd.read_csv('sample1.csv', names=headers, quotechar='"', skipinitialspace=True)
-rel_para = ['Project ID', 'Project Cost', 'Project Subject Category Tree', 'Project Subject Subcategory Tree', 'Project Grade Level Category', 'Project Resource Category']
+rel_para = ['Project ID', 'Project Cost', 'Project Subject Category Tree', 'Project Grade Level Category', 'Project Resource Category']
 projects = projects.loc[:, rel_para]
 projects = projects.dropna()
 
