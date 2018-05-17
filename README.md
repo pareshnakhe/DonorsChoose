@@ -9,4 +9,9 @@ I am using the Projects.csv and Donations.csv files for this experiment and are 
 
 I am modelling the regression problem where the independent variables are ('Project Cost', 'Project Subject Category Tree', 'Project Grade Level Category', 'Project Resource Category') and the variable to predict is the fraction of the total cost that is funded. Note that this variable is bounded between 0 and 1. For this reason, I am using logistic regression with multiple classes as the predictor. All the possible values that the dependent variable can take can divided in 10 buckets, whcih form the classes.
 
+Conclusion:
+-----------
+
+The classification score obtained with just 2 buckets is sligtly above 50% i.e. with just these parameters *and nothing else* one can predict slightly better than random guessing whether the project donations will cross the 50% mark or not. This is rather expected since the only information we used was *some project parameters*. We do not consider the project essay for example, which might hold significant clues as to *how important* the project is for students. Nevertheless, I believe this experiment shows that the project parameters used here are not entirely irrelevant in their impact on the actual donations received.
+
 An interesting side-observation of this experiment is that there is a noticeable spike in the number of projects that are funded close to 50% (See ProjCostsCovered.png). I am not sure what the reason for that is. Also, there are a substantial number of projects (36615) that were over-funded. It's a pity that the systems of DonorChoose allow for over-funding when there are so many others which are hardly funded.
