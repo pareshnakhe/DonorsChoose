@@ -11,7 +11,7 @@ I am using the Projects.csv and Donations.csv files for this experiment and are 
 
 I am modelling the regression problem where the independent variables are ('Project Cost', 'Project Subject Category Tree', 'Project Grade Level Category', 'Project Resource Category') and the variable to predict is the fraction of the total cost that is funded. Note that this variable is bounded between 0 and 1. For this reason, I am using logistic regression with multiple classes as the predictor. All the possible values that the dependent variable can take can divided in 10 buckets, whcih form the classes.
 
-Part2:
+Part2: (in /Code and /Graphs)
 -----
 
 In the second part, I extend the same idea to a larger set of attributes; specifically, using (Project Cost,Project Subject Category Tree,Project Grade Level Category,Project Resource Category,Total Donation,School Metro Type,School Percentage Free Lunch,School State).
